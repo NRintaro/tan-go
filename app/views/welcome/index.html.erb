@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h1>単語一覧</h1>
+</div>
+<div class="list-group">
+  <% @words.each do |word| %>
+    <%= link_to(root_path, class: 'list-group-item') do %>
+      <h4 class="list-group-item-heading">
+        <%= word.word %>
+          <p class="list-group-item-text">
+            <%= word.reading %>
+          </p>
+      </h4>
+    <% end %>
+  <% end %>
+</div>
