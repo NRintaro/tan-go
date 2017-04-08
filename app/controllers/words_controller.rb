@@ -14,10 +14,10 @@ class WordsController < ApplicationController
     @word =  Word.new( word_params )
     if @word.save
       # @wordはword_path(@word)に自動変換される
-      redirect_to @word, notice: "単語が登録されました。"
+      redirect_to @word, notice: "登録されました。"
     else
       # ValidationエラーなどでDBに保存できない場合 new.html.erbを再表示
-      render 'new'
+      render :new
     end
   end
 
