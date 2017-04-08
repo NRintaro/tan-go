@@ -1,2 +1,27 @@
-<h1>Words#show</h1>
-<p>Find me in app/views/words/show.html.erb</p>
+<div class="page-header">
+  <h1>
+    <%= @word.word %>
+  </h1>
+    <%= @word.reading %>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+       意味
+      </div>
+      <div class="panel-body">
+        <%= @word.meaning %>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+       例文
+      </div>
+      <div class="panel-body">
+        <%= @word.example %>
+      </div>
+    </div>
+  </div>
+</div>

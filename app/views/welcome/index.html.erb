@@ -3,7 +3,7 @@
 </div>
 <div class="list-group">
   <% @words.each do |word| %>
-    <%= link_to(root_path, class: 'list-group-item') do %>
+    <%= link_to(word, class: 'list-group-item') do %>
       <h4 class="list-group-item-heading">
         <%= word.word %>
       </h4>
