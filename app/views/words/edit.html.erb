@@ -1,2 +1,38 @@
-<h1>Words#edit</h1>
-<p>Find me in app/views/words/edit.html.erb</p>
+<div class="page-header">
+  <h1>単語情報の編集</h1>
+</div>
+
+<%= form_for(@word, class: 'form-horizontal', role: 'form') do |f| %>
+  <% if @word.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% @word.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :word %>
+    <%= f.text_field :word, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :reading %>
+    <%= f.text_field :reading, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :meaning %>
+    <%= f.text_field :meaning, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :example %>
+    <%= f.text_area :example, class: 'form-control' %>
+  </div>
+
+  <%= f.submit '更新', class: 'btn btn-default', data: { disable_with: '更新中・・・' } %>
+
+<% end %>

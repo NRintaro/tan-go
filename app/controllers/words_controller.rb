@@ -28,9 +28,16 @@ class WordsController < ApplicationController
   end
 
   def edit
+    @word = Word.find(params[:id])
   end
 
   def update
+    @word = Word.find(params[:id])
+    if @word.update( word_params )
+      redirect_to @word, notice: "更新されました"
+    else
+      render :edit
+    end
   end
 
   private
