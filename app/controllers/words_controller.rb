@@ -22,6 +22,9 @@ class WordsController < ApplicationController
   end
 
   def destroy
+    @word = Word.find(params[:id])
+    @word.destroy!
+    redirect_to root_path, notice: "削除されました"
   end
 
   def edit

@@ -24,4 +24,9 @@
       </div>
     </div>
   </div>
+
+  <div class="col-md-4">
+    <%= link_to("単語を削除する", @word, class: 'btn btn-danger btn-lg btn-block', method: :delete, data: {confirm: "本当に削除しますか？"}) %>
+  </div>
+
 </div>
