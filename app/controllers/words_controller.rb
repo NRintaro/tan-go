@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+
   def show
     @word = Word.find(params[:id])
   end
@@ -35,4 +36,5 @@ class WordsController < ApplicationController
   def word_params
     params.require( :word ).permit( :word, :reading, :meaning, :example )
   end
+
 end
