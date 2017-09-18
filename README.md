@@ -1,24 +1,24 @@
-# README
+# バージョン
+- rails 5.0.0
+- ruby  2.3.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# tan-go
+単語帳。
+読書中に調べた単語を記録しておく。
 
-Things you may want to cover:
+# セットアップ
+Gemのインストール
+```
+bundle install --path vendor/bundle
+```
+マイグレーションファイルの実行
+```
+bundle exec rails db:migrate
+```
+サーバの起動
+```
+bundle exec rails s -b 0.0.0.0
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 未実装な機能
+- 単語検索機能
